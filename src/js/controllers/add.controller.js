@@ -1,9 +1,13 @@
-let AddController = function($scope) {
-  
-  
+let AddController = function($scope,$http,URL) {
+  $scope.addFoodItem = function(foodObj){
+    $http.post(URL,foodObj).then((res)=>{
+      console.log(res);
+      $scope.food = {};
+    });
+  }
 
 };
 
-AddController.$inject = ['$scope'];
+AddController.$inject = ['$scope','$http','URL'];
 
 export { AddController };

@@ -1,1 +1,12 @@
 <h4 class="title">add template</h4>
+
+<form ng-submit="addFoodItem(food)">
+  <p class="control">
+    <input ng-model="food.brand" type="text" class='input' placeholder="FoodBrand">
+  </p>
+  <p class="control">
+    <input ng-model="food.item" type="text" class="input" placeholder="Food Item"></input>
+  </p>
+<!--   {{ food }}--> 
+ <button class="button is-primary">Add Food Item</button>
+</form>
