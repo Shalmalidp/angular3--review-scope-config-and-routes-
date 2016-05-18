@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body ng-controller="CoolController">
-    <div class="container">
-      <p class='title' ng-repeat ='a in animals'> {{ a }}</p>
+  <body>
+    <div class="container" ui-view>
+      
     </div>
+
     <script src="js/bundle.js"></script>
   </body>
 </html>

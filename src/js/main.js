@@ -1,14 +1,21 @@
 import angular from 'angular';
-import 'angular-ui-router';
-import $ from 'jquery';
+import 'angular-ui-router'; //directly from source no need for naming
+//import $ from 'jquery';
 
+//importing controllers
+import {AddController }   from './controllers/add.controller';
+import {ListController}   from './controllers/list.controller';
+import {SingleController} from './controllers/single.controller';
+
+//import our Configuration 
+import { config } from './config';
+
+//registering angular modules
 angular
-  .module('app',[])
-  .controller('CoolController', ['$scope', function($scope){
-    //what is $scope 
-    $scope.animals =['goat','cow','lion','tiger','bear'];
-    console.log($scope);
-
-  }])
+  .module('app',['ui.router'])
+  .config(config)
+  .controller('AddController', AddController)
+  .controller('ListController', ListController)
+  .controller('SingleController', SingleController)
 ;
 
