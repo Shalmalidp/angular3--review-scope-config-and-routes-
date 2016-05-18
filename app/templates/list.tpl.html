@@ -1,7 +1,16 @@
 <h4 class="title">list template also my home page</h4>
 
-<ul ng-repeat="i in items">
-<li>{{ i }}</li>
-  
+<!-- 
+<ul ng-repeat="i in items"> {{ i.brand }} {{i.item}} </ul> -->
 
-</ul>
+<div class="box" ng-repeat="f in allFoods">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{ f.brand }}</strong> <small>{{ f.item }}</small>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
